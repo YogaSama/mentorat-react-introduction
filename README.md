@@ -39,47 +39,13 @@ _6H - Yoann Eichelberger_
 
 ## Comment ça marche ?
 
+- Injecte dans du HTML un DOM Virtuel
+- Compare ce DOM Virtuel avec le DOM.
+- Si le DOM Virtuel change, React applique les changements au DOM atomatiquement.
+
+---
+
 ![img](img/virtual-dom.png)
-
----
-
-# JSX / TSX Kezako ?
-
----
-
-## Code JS
-
-```ts
-React.createElement(
-  "div",
-  undefined,
-  React.createElement("h1", undefined, "Yoann Eichelberger"),
-  React.createElement(
-    "p",
-    undefined,
-    "Je suis ",
-    React.createElement(
-      "span",
-      { style: { backgroundColor: "red" } },
-      "développeur"
-    ),
-    "."
-  )
-);
-```
-
----
-
-## Code JSX
-
-```tsx
-<div>
-  <h1>Yoann Eichelberger</h1>
-  <p>
-    Je suis <span style={{ backgroundColor: "red" }}>développeur</span>.
-  </p>
-</div>
-```
 
 ---
 
